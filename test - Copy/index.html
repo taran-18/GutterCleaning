@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Gutter Cleaning</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      color: #333;
+      background: #f7f9fa;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+   .hero {
+  background: url('bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 250px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: slideInDown 1s ease-in-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      animation: slideInUp 1s ease-in-out;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: #ffc107;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: #ffca2c;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0f7c90;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    ul {
+      text-align: left;
+      max-width: 600px;
+      margin: auto;
+      padding-left: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .special-offer {
+      background: #e0f8e9;
+    }
+    .contact {
+      background: #f1f1f1;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .icon {
+      margin-right: 8px;
+      color: #0f7c90;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #0f7c90;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #0c6373;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.popup a {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #0f7c90;
+  text-decoration: none;
+}
+.popup a:hover {
+  text-decoration: underline;
+}
+.popup.hidden {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>GUTTER CLEANING SERVICES	!</h1>
+    <p>Keep Your Home Safe & Your Gutters Flowing!</p>
+    <a href="#" class="cta-button" id="call-button"><i class="fas fa-phone icon"></i>Call Now</a>
+     <div id="call-popup" class="popup hidden">
+  <div class="popup-content">
+    <p>Select a number to call:</p>
+    <a href="tel:2368662317">📞 236-866-2317</a><br />
+    <a href="tel:7789546213">📞 (778) 954-6213</a><br />
+    <button id="close-popup">Cancel</button>
+  </div>
+</div>
+
+  </header>
+
+  <section class="about">
+    <h2>Local. Reliable. Affordable.</h2>
+    <p>Serving Surrey & Nearby Areas</p>
+  </section>
+
+  <section class="services">
+    <h2>We Offer:</h2>
+    <ul>
+      <li>✔️ Full Gutter Cleaning (hand removal)</li>
+      <li>✔️ Downspout Flushing</li>
+      <li>✔️ Debris Bagged & Removed</li>
+      <li>✔️ Minor Gutter Repairs (Optional)</li>
+      <li>✔️ Before & After Photos Available</li>
+    </ul>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✅ Local student-run business</li>
+      <li>✅ Fast, friendly, and professional</li>
+      <li>✅ Safe, clean, and respectful service</li>
+    </ul>
+  </section>
+
+  <section class="special-offer">
+    <h2>Spring Special!</h2>
+    <p>15% OFF – Book Now!</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Call or Text: <strong>236-866-2317</strong> | <strong>(778) 954-6213</strong></p>
+
+    <form action="https://formsubmit.co/tarandeep1803@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <h3>Booking Form</h3>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="message" placeholder="Your Message or Preferred Appointment Date" rows="4" required></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Professional Gutter Cleaning</p>
+  </footer>
+
+  <script>
+    document.getElementById("call-button").addEventListener("click", function(e) {
+  e.preventDefault();
+  document.getElementById("call-popup").classList.remove("hidden");
+});
+
+document.getElementById("close-popup").addEventListener("click", function() {
+  document.getElementById("call-popup").classList.add("hidden");
+});
+
+    });
+  </script>
+</body>
+</html>
