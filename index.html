@@ -186,15 +186,7 @@
   <header class="hero">
     <h1>GUTTER CLEANING SERVICES	!</h1>
     <p>Keep Your Home Safe & Your Gutters Flowing!</p>
-    <a href="#" class="cta-button" id="call-button"><i class="fas fa-phone icon"></i>Call Now</a>
-     <div id="call-popup" class="popup hidden">
-  <div class="popup-content">
-    <p>Select a number to call:</p>
-    <a href="tel:2368662317">📞 236-866-2317</a><br />
-    <a href="tel:7789546213">📞 (778) 954-6213</a><br />
-    <button id="close-popup">Cancel</button>
-  </div>
-</div>
+    <a href="#" class="cta-button" id="call-button">Call Now</a>
 
   </header>
 
@@ -248,16 +240,11 @@
   </footer>
 
   <script>
-    document.getElementById("call-button").addEventListener("click", function(e) {
+  document.getElementById("call-button").addEventListener("click", function(e) {
   e.preventDefault();
-  document.getElementById("call-popup").classList.remove("hidden");
+  window.location.href = "tel:2368662317"; // You can change to your preferred number
 });
 
-document.getElementById("close-popup").addEventListener("click", function() {
-  document.getElementById("call-popup").classList.add("hidden");
-});
-
-    });
   </script>
 </body>
 </html>
